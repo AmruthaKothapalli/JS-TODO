@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO</title>
+    <link rel="stylesheet" href="../CSS/todo.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center; padding-top: 30px; color: midnightblue">
+      TODO
+    </h1>
+    <main class="app">
+      <section class="createTodo">
+        <form id="todoForm">
+          <input
+            type="text"
+            name="content"
+            id="content"
+            placeholder="Add your task..."
+          />
+          <h4>Pick the category</h4>
+          <div class="options">
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category1"
+                value="business"
+              />
+              <span class="bubble business"></span>
+              <div>Business</div>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="category"
+                id="category2"
+                value="personal"
+              />
+              <span class="bubble personal"></span>
+              <div>Personal</div>
+            </label>
+          </div>
+          <input type="submit" value="ADD" />
+        </form>
+      </section>
+      <section class="todo-list">
+        <h3>Todo-List</h3>
+        <br />
+        <div class="list" id="todolist">
+          <!-- <div class="todoItem done">
+            <label>
+              <input type="checkbox" />
+              <span class="bubble business"></span>
+            </label>
+            <div class="todoContent">
+              <input type="text" value="taskssssss1" readonly />
+            </div>
+            <div class="actions">
+              <button class="edit">Edit</button>
+              <button class="del">Delete</button>
+            </div>
+          </div>
+
+          <div class="todoItem done">
+            <label>
+              <input type="checkbox" />
+              <span class="bubble personal"></span>
+            </label>
+            <div class="todoContent">
+              <input type="text" value="taskssssss2" readonly />
+            </div>
+            <div class="actions">
+              <button class="edit">Edit</button>
+              <button class="del">Delete</button>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+    <script src="../JAVASCRIPT/todo.js"></script>
+  </body>
+</html>

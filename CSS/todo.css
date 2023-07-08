@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: initial;
+}
+
+body {
+  color: black;
+  background-color: darkgrey;
+  margin-bottom: 300px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 20px;
+  border: 2px solid midnightblue;
+  border-radius: 3px;
+}
+section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.createTodo input[type="text"] {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  padding: 7px 7px;
+  background-color: azure;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.createTodo .options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.createTodo .options label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: azure;
+  border-radius: 3px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+.bubble {
+  display: flex;
+  border-radius: 50%;
+  border: 2px solid blue;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  justify-content: center;
+}
+.bubble.personal {
+  border: 2px solid mediumvioletred;
+}
+.bubble::after {
+  content: "";
+  display: block;
+  opacity: 0.5rem;
+  background-color: blue;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out;
+  width: 0px;
+  height: 0px;
+}
+.bubble.personal::after {
+  background-color: mediumvioletred;
+}
+
+input:checked ~ .bubble::after {
+  margin-top: 1.75px;
+  width: 8px;
+  height: 8px;
+}
+
+.createTodo input[type="submit"] {
+  margin-left: 90px;
+  width: 50%;
+  height: 30px;
+  background-color: rebeccapurple;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 10px;
+}
+.createTodo input[type="submit"]:hover {
+  opacity: 0.85;
+}
+.todo-list .list {
+  margin-bottom: 5px;
+}
+
+.todo-list .todoItem {
+  display: flex;
+  align-items: center;
+  background-color: azure;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.todoItem label {
+  display: block;
+  margin-right: 7px;
+}
+
+.todoItem .todoContent {
+  flex: 1 1 0%;
+}
+
+.todoItem .actions {
+  display: flex;
+}
+.todoItem .actions button {
+  padding: 5px;
+  display: block;
+  border-radius: 3px;
+  transition: 0.2s ease-in-out;
+}
+.todoItem .actions button:hover {
+  opacity: 0.75;
+}
+.todoItem .actions .edit {
+  margin-right: 5px;
+  background-color: rgb(47, 197, 47);
+}
+.todoItem .actions .del {
+  background-color: red;
+}
+
+.todoItem.done .todoContent input {
+  text-decoration: line-through;
+  color: gray;
+  width: 100%;
+}
